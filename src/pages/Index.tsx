@@ -1,7 +1,7 @@
-
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
-import { Building2, FileText, MapPin, PrinterIcon } from "lucide-react";
+import { Building2, FileText, MapPin, PrinterIcon, CreditCard } from "lucide-react";
+import RazorpayButton from "@/components/RazorpayButton";
 
 const Index = () => {
   return (
@@ -55,6 +55,22 @@ const Index = () => {
             <p className="text-gray-600">
               Monitor your print orders in real-time and get notifications on status updates
             </p>
+          </div>
+        </div>
+
+        {/* Payment Section */}
+        <div className="mt-20 text-center">
+          <h2 className="text-3xl font-bold mb-6">Easy Payment Options</h2>
+          <p className="text-xl text-gray-600 max-w-2xl mx-auto mb-10">
+            Pay securely with Razorpay for all your printing needs
+          </p>
+          <div className="max-w-md mx-auto">
+            <RazorpayButton 
+              amount={299}
+              buttonText="Pay with Razorpay"
+              title="Quick Print Payment"
+              description="Secure, fast payment for your print orders"
+            />
           </div>
         </div>
 
